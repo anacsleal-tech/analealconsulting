@@ -176,24 +176,11 @@ a {
 .hero-visual {
   position: relative;
   min-height: 100%;
-  background:
-    radial-gradient(circle at 65% 35%, #eee7dc 0, transparent 35%),
-    linear-gradient(135deg, #e9e0d3, #c9b49a);
+  background-image: url("hero-ana-leal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-.hero-note {
-  position: absolute;
-  top: 100px;
-  left: 80px;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 27px;
-  line-height: 1.5;
-  transform: rotate(-4deg);
-  color: var(--green);
-}
-
-
 /* ------------------------------
    SERVICES
 ------------------------------ */
