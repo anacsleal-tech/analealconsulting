@@ -1,3 +1,9 @@
+/* =========================================================
+   ANA LEAL CONSULTING
+   FULL WEBSITE STYLES
+========================================================= */
+
+
 /* ==============================
    BASE
 ============================== */
@@ -28,7 +34,7 @@ body {
   font-family: "DM Sans", sans-serif;
   color: var(--text);
   background: var(--cream);
-  line-height: 1.55;
+  line-height: 1.5;
   overflow-x: hidden;
 }
 
@@ -51,35 +57,40 @@ a {
 ============================== */
 
 .header {
-  height: 90px;
+  width: 100%;
+  height: 82px;
   padding: 0 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f7f4ee;
+  background: rgba(247, 244, 238, 0.98);
+  position: relative;
+  z-index: 20;
 }
 
 .logo {
   display: flex;
   flex-direction: column;
   letter-spacing: 7px;
-  font-size: 24px;
-  line-height: 1.1;
+  font-size: 22px;
+  line-height: 1;
 }
 
 .logo small {
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: 6px;
   margin-top: 7px;
 }
 
 .nav {
   display: flex;
+  align-items: center;
   gap: 38px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .nav a {
+  padding: 8px 0;
   transition: opacity 0.2s ease;
 }
 
@@ -88,8 +99,9 @@ a {
 }
 
 .linkedin {
-  font-weight: 600;
-  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
 }
 
 
@@ -98,33 +110,38 @@ a {
 ============================== */
 
 .eyebrow {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #8a674b;
-  margin-bottom: 15px;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #76583f;
+  margin-bottom: 14px;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  padding: 15px 25px;
-  font-size: 14px;
+  gap: 25px;
+  min-height: 46px;
+  padding: 13px 24px;
+  font-size: 13px;
   transition: all 0.2s ease;
 }
 
 .button-primary {
   background: var(--green);
   color: var(--white);
+  border: 1px solid var(--green);
 }
 
 .button-primary:hover {
   background: var(--green-light);
+  border-color: var(--green-light);
 }
 
 .button-secondary {
   border: 1px solid var(--text);
+  background: rgba(247, 244, 238, 0.7);
 }
 
 .button-secondary:hover {
@@ -138,25 +155,43 @@ a {
 ============================== */
 
 .hero {
+  position: relative;
   width: 100%;
-  min-height: 620px;
-  display: grid;
-  grid-template-columns: 55% 45%;
-  background: #f4efe7;
+  min-height: 610px;
+
+  display: block;
+
+  background-color: #eee7dc;
+  background-image: url("./hero-ana-leal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  overflow: hidden;
 }
 
 .hero-content {
-  min-width: 0;
-  padding: 70px 8%;
+  position: relative;
+  z-index: 2;
+
+  width: 49%;
+  min-height: 610px;
+
+  padding: 58px 0 58px 7%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .hero h1 {
-  font-size: clamp(54px, 5vw, 78px);
+  max-width: 610px;
+
+  font-size: clamp(52px, 4.4vw, 72px);
+  line-height: 1.03;
+
   color: var(--green);
-  max-width: 760px;
 }
 
 .hero h1 span {
@@ -164,25 +199,27 @@ a {
 }
 
 .hero-description {
-  max-width: 590px;
-  font-size: 19px;
-  margin: 30px 0;
+  max-width: 520px;
+  margin: 25px 0;
+
+  font-size: 18px;
+  line-height: 1.45;
 }
 
 .hero-buttons {
   display: flex;
+  align-items: center;
   gap: 18px;
   flex-wrap: wrap;
 }
 
+/*
+The photograph is now the background
+of the complete hero section.
+*/
+
 .hero-visual {
-  min-width: 0;
-  width: 100%;
-  min-height: 620px;
-  background-image: url("./hero-ana-leal.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  display: none;
 }
 
 
@@ -191,64 +228,85 @@ a {
 ============================== */
 
 .services {
-  padding: 75px 5%;
+  padding: 55px 5% 65px;
   background: #faf8f4;
 }
 
 .section-intro {
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 }
 
 .section-intro h2 {
-  font-size: 42px;
-  margin-bottom: 10px;
+  font-size: 41px;
+  margin-bottom: 8px;
 }
 
 .section-intro > p:last-child {
-  max-width: 650px;
-  font-size: 17px;
+  max-width: 670px;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .service-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  gap: 13px;
 }
 
 .service-card {
-  min-height: 285px;
+  min-height: 260px;
+
+  padding: 22px 20px;
+
   border: 1px solid var(--border);
-  padding: 27px 23px;
+  background: rgba(255, 255, 255, 0.25);
+
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.3);
-  transition: transform 0.2s ease, background 0.2s ease;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  background: white;
+  background: var(--white);
 }
 
 .service-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  border-radius: 50%;
+  background: #f1ebe3;
+
   color: var(--brown);
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .service-card h3 {
-  font-size: 20px;
-  margin-bottom: 17px;
+  font-size: 18px;
+  line-height: 1.08;
+  margin-bottom: 12px;
 }
 
 .service-card p {
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.45;
   color: var(--muted);
 }
 
 .service-card a {
   margin-top: auto;
-  font-size: 23px;
+  padding-top: 15px;
+  font-size: 21px;
 }
 
 
@@ -257,64 +315,86 @@ a {
 ============================== */
 
 .work {
+  width: 100%;
+
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 58% 42%;
 }
 
 .work-main {
-  padding: 70px 7%;
+  padding: 55px 6%;
   background: #eee8df;
 }
 
 .work-main h2 {
-  font-size: 48px;
-  margin-bottom: 22px;
+  max-width: 700px;
+
+  margin-bottom: 17px;
+
+  font-size: 43px;
+  line-height: 1.05;
 }
 
 .work-intro {
-  font-size: 17px;
-  max-width: 680px;
-  margin-bottom: 25px;
+  max-width: 650px;
+
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .work ul {
   list-style: none;
-  margin: 25px 0 35px;
+  margin: 22px 0 28px;
 }
 
 .work li {
-  margin: 11px 0;
+  margin: 9px 0;
+  font-size: 14px;
 }
 
 .work li::before {
   content: "✓";
-  margin-right: 15px;
+  display: inline-block;
+
+  width: 28px;
+
   color: var(--green);
+  font-size: 17px;
 }
 
 .engagements {
-  padding: 70px 9%;
+  padding: 55px 7%;
+
   background: var(--green);
-  color: white;
+  color: var(--white);
 }
 
 .light {
-  color: #bfb8aa;
+  color: #c7c0b4;
 }
 
 .engagement {
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+}
+
+.engagement:last-child {
+  border-bottom: 0;
 }
 
 .engagement h3 {
-  font-size: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 .engagement p {
   font-size: 13px;
-  opacity: 0.8;
+  line-height: 1.4;
+  opacity: 0.82;
 }
 
 
@@ -324,34 +404,61 @@ a {
 
 .about {
   display: grid;
-  grid-template-columns: 270px 1fr;
-  gap: 50px;
-  padding: 55px 7%;
-  background: #faf8f4;
+  grid-template-columns: 250px 1fr;
   align-items: center;
+
+  gap: 38px;
+
+  padding: 38px 6%;
+
+  background: #faf8f4;
 }
 
 .about-photo {
-  width: 100%;
+  width: 250px;
   height: 230px;
-  background: linear-gradient(135deg, #ddd2c4, #bba890);
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ddd2c4,
+      #bba890
+    );
+
+  background-size: cover;
+  background-position: center;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .about-content h2 {
-  font-size: 42px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+
+  font-size: 39px;
+  line-height: 1.05;
 }
 
 .about-content p {
-  margin-bottom: 15px;
+  margin-bottom: 9px;
+
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .about-content .button {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 
@@ -360,19 +467,25 @@ a {
 ============================== */
 
 .contact {
+  padding: 80px 20px;
+
   text-align: center;
-  padding: 100px 20px;
+
   background: var(--warm);
 }
 
 .contact h2 {
-  font-size: 54px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+
+  font-size: 48px;
 }
 
 .contact > p:not(.eyebrow) {
   max-width: 650px;
-  margin: 0 auto 30px;
+
+  margin: 0 auto 27px;
+
+  font-size: 15px;
 }
 
 
@@ -381,12 +494,15 @@ a {
 ============================== */
 
 footer {
-  padding: 45px 6%;
-  background: var(--green);
-  color: white;
+  padding: 38px 6%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  background: var(--green);
+  color: var(--white);
+
   font-size: 12px;
 }
 
@@ -399,58 +515,83 @@ footer {
 }
 
 
-/* ==============================
+/* =========================================================
    TABLET
-============================== */
+========================================================= */
 
 @media (max-width: 1100px) {
 
   .nav {
-    gap: 20px;
+    gap: 22px;
+  }
+
+  .hero {
+    min-height: 570px;
+    background-position: 55% center;
+  }
+
+  .hero-content {
+    width: 52%;
+    min-height: 570px;
+    padding-left: 6%;
   }
 
   .hero h1 {
     font-size: 55px;
   }
 
-  .hero-content {
-    padding: 60px 7%;
+  .hero-description {
+    font-size: 16px;
+    max-width: 450px;
   }
 
   .service-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .work {
+    grid-template-columns: 55% 45%;
+  }
 }
 
 
-/* ==============================
-   SMALL TABLET / MOBILE
-============================== */
+/* =========================================================
+   SMALL TABLET
+========================================================= */
 
 @media (max-width: 900px) {
+
+  .header {
+    padding: 0 7%;
+  }
 
   .nav {
     display: none;
   }
 
   .hero {
-    display: block;
-    min-height: auto;
+    min-height: 610px;
+    background-position: 58% center;
   }
 
   .hero-content {
-    padding: 60px 7%;
+    width: 62%;
+    min-height: 610px;
+
+    padding: 50px 0 50px 7%;
   }
 
   .hero h1 {
-    font-size: 52px;
+    font-size: 50px;
+  }
+
+  .hero-description {
+    max-width: 430px;
+    font-size: 16px;
   }
 
   .hero-visual {
-    width: 100%;
-    min-height: 420px;
-    background-size: cover;
-    background-position: center;
+    display: none;
   }
 
   .service-grid {
@@ -461,12 +602,19 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .work-main,
+  .engagements {
+    padding: 55px 7%;
+  }
+
   .about {
-    grid-template-columns: 1fr;
+    grid-template-columns: 210px 1fr;
+    gap: 30px;
   }
 
   .about-photo {
-    width: 220px;
+    width: 210px;
+    height: 210px;
   }
 
   footer {
@@ -477,52 +625,168 @@ footer {
 }
 
 
-/* ==============================
-   PHONE
-============================== */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 600px) {
 
   .header {
     height: 75px;
+    padding: 0 7%;
   }
 
   .logo {
     font-size: 18px;
+    letter-spacing: 5px;
+  }
+
+  .logo small {
+    font-size: 7px;
+    letter-spacing: 4px;
+  }
+
+  .linkedin {
+    font-size: 16px;
+  }
+
+
+  /* HERO TEXT */
+
+  .hero {
+    min-height: auto;
+
+    background-image: none;
+    background-color: #f4efe7;
+
+    overflow: visible;
   }
 
   .hero-content {
-    padding: 50px 7%;
+    width: 100%;
+    min-height: auto;
+
+    padding: 48px 7% 42px;
   }
 
   .hero h1 {
+    max-width: 100%;
+
     font-size: 43px;
+    line-height: 1.04;
   }
 
   .hero-description {
+    max-width: 100%;
+
+    margin: 22px 0;
+
     font-size: 16px;
   }
 
   .hero-buttons {
+    width: 100%;
+
     flex-direction: column;
     align-items: stretch;
+
+    gap: 12px;
   }
 
+  .hero-buttons .button {
+    width: 100%;
+  }
+
+
+  /* HERO IMAGE BELOW TEXT */
+
   .hero-visual {
-    min-height: 300px;
+    display: block;
+
+    width: 100%;
+    height: 320px;
+
+    background-image: url("./hero-ana-leal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+
+  /* SERVICES */
+
+  .services {
+    padding: 50px 7%;
+  }
+
+  .section-intro {
+    margin-bottom: 25px;
+  }
+
+  .section-intro h2 {
+    font-size: 35px;
+  }
+
+  .section-intro > p:last-child {
+    font-size: 15px;
   }
 
   .service-grid {
     grid-template-columns: 1fr;
   }
 
-  .work-main h2,
-  .contact h2 {
-    font-size: 39px;
+  .service-card {
+    min-height: 230px;
+  }
+
+
+  /* WORK */
+
+  .work-main,
+  .engagements {
+    padding: 50px 7%;
+  }
+
+  .work-main h2 {
+    font-size: 37px;
+  }
+
+
+  /* ABOUT */
+
+  .about {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding: 45px 7%;
   }
 
   .about-photo {
     width: 100%;
-    max-width: 240px;
+    max-width: 260px;
+    height: 250px;
+  }
+
+  .about-content h2 {
+    font-size: 37px;
+  }
+
+
+  /* CONTACT */
+
+  .contact {
+    padding: 65px 7%;
+  }
+
+  .contact h2 {
+    font-size: 39px;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    padding: 35px 7%;
   }
 }
