@@ -335,46 +335,13 @@ a {
   height: 560px;
 
   background-color: #e9e1d6;
-
-  background-image:
-    url("./hero-ana-leal.jpg");
-
-  background-repeat: no-repeat;
-
-  /*
-     COVER is deliberate here.
-
-     The image is confined to the RIGHT half,
-     so its built-in text cannot overlap the
-     HTML headline.
-  */
-
-  background-size: cover;
-
-  /*
-     Push the image slightly left/right here if required.
-  */
-
-  background-position: center center;
-}
-
-
-/*
-   Soft transition between the beige left panel
-   and the photograph.
-*/
-
-.hero-visual {
-  position: relative;
-
-  width: 100%;
-  height: 560px;
-
-  background-color: #e9e1d6;
   background-image: url("./hero-ana-leal.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+
+  /* Moves the image so the embedded words are outside the visible area */
+  background-position: 78% center;
 }
 
 
