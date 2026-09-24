@@ -224,124 +224,100 @@ a {
    HERO
 ========================================================= */
 
+/* =========================================================
+   HERO
+========================================================= */
+
 .hero {
   position: relative;
-
   width: 100%;
-  height: 560px;
-
-  display: grid;
-
-  /*
-     IMPORTANT:
-     The left side is the HTML content.
-     The right side contains the ORIGINAL image.
-
-     This prevents the image's own words from sitting
-     underneath the headline.
-  */
-
-  grid-template-columns: 48% 52%;
-
-  background: var(--cream-hero);
-
+  height: 590px;
   overflow: hidden;
+
+  /* Clean image across the ENTIRE hero */
+  background-image: url("./hero-ana-leal.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
+/* Soft cream layer only behind the copy */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 
-/* ---------------------------------------------------------
-   HERO CONTENT
---------------------------------------------------------- */
+  background: linear-gradient(
+    90deg,
+    rgba(247, 244, 238, 0.98) 0%,
+    rgba(247, 244, 238, 0.94) 27%,
+    rgba(247, 244, 238, 0.70) 42%,
+    rgba(247, 244, 238, 0.20) 56%,
+    rgba(247, 244, 238, 0) 68%
+  );
+}
 
 .hero-content {
   position: relative;
-  z-index: 5;
+  z-index: 2;
 
-  height: 560px;
+  width: 100%;
+  max-width: 760px;
+  height: 590px;
 
-  padding:
-    52px
-    3%
-    52px
-    7%;
+  padding: 55px 0 55px 6.5%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  background: var(--cream-hero);
+  align-items: flex-start;
 }
-
 
 .hero .eyebrow {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+  font-size: 11px;
+  letter-spacing: 1.8px;
 }
 
-
-/* HEADLINE */
-
 .hero h1 {
-  max-width: 610px;
+  max-width: 720px;
+
+  font-size: clamp(52px, 4.4vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -1.2px;
 
   color: var(--green);
-
-  font-size: clamp(48px, 4vw, 66px);
-
-  line-height: 1.02;
-
-  letter-spacing: -1px;
 }
 
 .hero h1 span {
   color: var(--brown);
 }
 
-
-/* DESCRIPTION */
-
 .hero-description {
-  max-width: 520px;
+  max-width: 610px;
 
-  margin: 24px 0;
-
-  color: var(--text);
+  margin: 26px 0 28px;
 
   font-size: 17px;
+  line-height: 1.5;
 
-  line-height: 1.45;
+  color: var(--text);
 }
-
-
-/* BUTTONS */
 
 .hero-buttons {
   display: flex;
   align-items: center;
-
   gap: 18px;
-
   flex-wrap: wrap;
 }
 
-
-/* ---------------------------------------------------------
-   HERO IMAGE
---------------------------------------------------------- */
-
+/*
+  We no longer need a separate right-hand image.
+  The image is now the background of the whole hero.
+*/
 .hero-visual {
-  position: relative;
-
-  width: 100%;
-  height: 560px;
-
-  background-color: #e9e1d6;
-  background-image: url("./hero-ana-leal.png");
-
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  /* Moves the image so the embedded words are outside the visible area */
-  background-position: 78% center;
+  display: none;
 }
 
 
