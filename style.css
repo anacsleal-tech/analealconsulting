@@ -1,6 +1,6 @@
 /* =========================================================
    ANA LEAL CONSULTING
-   FINAL STYLESHEET
+   COMPLETE STYLESHEET
 ========================================================= */
 
 
@@ -12,7 +12,7 @@
   --green: #17352d;
   --green-light: #274a3f;
   --cream: #f7f4ee;
-  --cream-soft: #f4efe7;
+  --cream-soft: #f3eee6;
   --warm: #ebe4da;
   --brown: #9a6b42;
   --text: #1c211f;
@@ -77,9 +77,6 @@ a {
   z-index: 50;
 }
 
-
-/* LOGO */
-
 .logo {
   display: flex;
   flex-direction: column;
@@ -98,9 +95,6 @@ a {
   font-size: 8px;
   letter-spacing: 6px;
 }
-
-
-/* NAVIGATION */
 
 .nav {
   display: flex;
@@ -135,9 +129,6 @@ a {
   width: 100%;
 }
 
-
-/* LINKEDIN */
-
 .linkedin {
   font-size: 17px;
   font-weight: 600;
@@ -145,35 +136,32 @@ a {
 
 
 /* =========================================================
-   COMMON ELEMENTS
+   COMMON
 ========================================================= */
 
 .eyebrow {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   color: #76583f;
 
   font-size: 11px;
   font-weight: 500;
 
-  letter-spacing: 1.8px;
+  letter-spacing: 1.7px;
 
   text-transform: uppercase;
 }
 
-
-/* BUTTONS */
-
 .button {
-  min-height: 46px;
+  min-height: 44px;
 
-  padding: 13px 25px;
+  padding: 12px 23px;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  gap: 28px;
+  gap: 27px;
 
   font-size: 13px;
 
@@ -185,9 +173,7 @@ a {
 
 .button-primary {
   color: var(--white);
-
   background: var(--green);
-
   border: 1px solid var(--green);
 }
 
@@ -218,39 +204,36 @@ a {
   position: relative;
 
   width: 100%;
-  height: 590px;
+  height: 500px;
 
   overflow: hidden;
 
-  /*
-    CLEAN IMAGE ACROSS THE WHOLE HERO.
-    There is NO separate image column anymore.
-  */
-
   background-color: var(--cream-soft);
 
-  background-image:
-    url("./hero-ana-leal.png");
+  background-image: url("./hero-ana-leal.png");
 
   background-repeat: no-repeat;
 
+  /*
+    The clean image fills the complete hero.
+    No separate right-hand image column.
+  */
   background-size: cover;
 
   /*
-    The important part of the photograph stays
-    toward the right side.
+    Shifts the photo slightly toward the right so the
+    laptop/plant remain visible and the left stays calm.
   */
-
-  background-position: center center;
+  background-position: 58% center;
 }
 
 
 /*
-  Soft cream wash over LEFT side only.
+   Cream overlay:
+   strong behind the text,
+   then gradually disappears into the photograph.
 
-  This makes the text readable while allowing
-  the photograph to flow naturally behind the
-  rest of the hero.
+   IMPORTANT: there is no hard vertical division.
 */
 
 .hero::before {
@@ -263,24 +246,16 @@ a {
 
   pointer-events: none;
 
-  background:
-    linear-gradient(
-      90deg,
-
-      rgba(247, 244, 238, 1) 0%,
-
-      rgba(247, 244, 238, 0.99) 18%,
-
-      rgba(247, 244, 238, 0.94) 30%,
-
-      rgba(247, 244, 238, 0.76) 40%,
-
-      rgba(247, 244, 238, 0.40) 49%,
-
-      rgba(247, 244, 238, 0.10) 58%,
-
-      rgba(247, 244, 238, 0) 68%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(243, 238, 230, 0.99) 0%,
+    rgba(243, 238, 230, 0.98) 23%,
+    rgba(243, 238, 230, 0.92) 32%,
+    rgba(243, 238, 230, 0.72) 40%,
+    rgba(243, 238, 230, 0.42) 47%,
+    rgba(243, 238, 230, 0.16) 54%,
+    rgba(243, 238, 230, 0) 62%
+  );
 }
 
 
@@ -288,19 +263,14 @@ a {
 
 .hero-content {
   position: relative;
-
   z-index: 3;
 
-  width: 54%;
-  max-width: 780px;
+  width: 50%;
+  max-width: 720px;
 
-  height: 590px;
+  height: 500px;
 
-  padding:
-    55px
-    0
-    55px
-    5.5%;
+  padding: 42px 0 42px 5.5%;
 
   display: flex;
   flex-direction: column;
@@ -309,24 +279,24 @@ a {
 }
 
 
-/* HERO EYEBROW */
+/* EYEBROW */
 
 .hero .eyebrow {
-  margin-bottom: 16px;
+  margin-bottom: 13px;
 }
 
 
-/* HERO TITLE */
+/* HEADLINE */
 
 .hero h1 {
   width: 100%;
-  max-width: 720px;
+  max-width: 660px;
 
   color: var(--green);
 
-  font-size: clamp(52px, 4.3vw, 70px);
+  font-size: clamp(48px, 3.7vw, 62px);
 
-  line-height: 1.02;
+  line-height: 1.01;
 
   letter-spacing: -1px;
 }
@@ -336,22 +306,19 @@ a {
 }
 
 
-/* HERO DESCRIPTION */
+/* DESCRIPTION */
 
 .hero-description {
   width: 100%;
-  max-width: 590px;
+  max-width: 565px;
 
-  margin:
-    25px
-    0
-    28px;
+  margin: 21px 0 24px;
 
   color: var(--text);
 
-  font-size: 17px;
+  font-size: 16px;
 
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 
@@ -361,15 +328,16 @@ a {
   display: flex;
   align-items: center;
 
-  gap: 18px;
+  gap: 16px;
 
   flex-wrap: wrap;
 }
 
 
 /*
-  This element remains in the HTML,
-  but is no longer needed visually.
+   The HTML still contains hero-visual.
+   It is intentionally hidden because the PNG is now
+   the background of the complete hero.
 */
 
 .hero-visual {
@@ -382,25 +350,19 @@ a {
 ========================================================= */
 
 .services {
-  padding:
-    55px
-    5%
-    65px;
+  padding: 48px 5% 58px;
 
   background: #faf8f4;
 }
 
-
-/* SERVICES INTRO */
-
 .section-intro {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 
 .section-intro h2 {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
-  font-size: 40px;
+  font-size: 39px;
 
   line-height: 1.08;
 }
@@ -413,38 +375,26 @@ a {
   line-height: 1.45;
 }
 
-
-/* SERVICE GRID */
-
 .service-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 
   gap: 13px;
 }
 
-
-/* SERVICE CARD */
-
 .service-card {
   min-width: 0;
-  min-height: 265px;
+  min-height: 255px;
 
-  padding:
-    22px
-    20px;
+  padding: 21px 19px;
 
   display: flex;
   flex-direction: column;
 
-  border:
-    1px solid
-    var(--border);
+  border: 1px solid var(--border);
 
-  background:
-    rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25);
 
   transition:
     transform 0.2s ease,
@@ -457,14 +407,11 @@ a {
   background: var(--white);
 }
 
-
-/* SERVICE ICON */
-
 .service-icon {
-  width: 44px;
-  height: 44px;
+  width: 43px;
+  height: 43px;
 
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   display: flex;
   align-items: center;
@@ -479,19 +426,13 @@ a {
   font-size: 19px;
 }
 
-
-/* SERVICE TITLE */
-
 .service-card h3 {
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 
   font-size: 17px;
 
   line-height: 1.1;
 }
-
-
-/* SERVICE DESCRIPTION */
 
 .service-card p {
   color: var(--muted);
@@ -500,9 +441,6 @@ a {
 
   line-height: 1.45;
 }
-
-
-/* SERVICE ARROW */
 
 .service-card > a {
   margin-top: auto;
@@ -522,17 +460,11 @@ a {
 
   display: grid;
 
-  grid-template-columns:
-    58% 42%;
+  grid-template-columns: 58% 42%;
 }
 
-
-/* LEFT SIDE */
-
 .work-main {
-  padding:
-    55px
-    6%;
+  padding: 50px 6%;
 
   background: #eee8df;
 }
@@ -540,9 +472,9 @@ a {
 .work-main h2 {
   max-width: 700px;
 
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 
-  font-size: 42px;
+  font-size: 40px;
 
   line-height: 1.06;
 }
@@ -550,21 +482,15 @@ a {
 .work-intro {
   max-width: 650px;
 
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   font-size: 15px;
 
   line-height: 1.45;
 }
 
-
-/* WORK LIST */
-
 .work ul {
-  margin:
-    21px
-    0
-    28px;
+  margin: 20px 0 26px;
 
   list-style: none;
 }
@@ -587,13 +513,8 @@ a {
   font-size: 16px;
 }
 
-
-/* RIGHT SIDE */
-
 .engagements {
-  padding:
-    55px
-    7%;
+  padding: 50px 7%;
 
   color: var(--white);
 
@@ -604,15 +525,11 @@ a {
   color: #c7bfb3;
 }
 
-
-/* ENGAGEMENT */
-
 .engagement {
-  padding: 14px 0;
+  padding: 13px 0;
 
   border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.27);
+    1px solid rgba(255, 255, 255, 0.27);
 }
 
 .engagement:last-child {
@@ -620,7 +537,7 @@ a {
 }
 
 .engagement h3 {
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 
   font-size: 17px;
 
@@ -641,38 +558,30 @@ a {
 ========================================================= */
 
 .about {
-  padding:
-    40px
-    6%;
+  padding: 38px 6%;
 
   display: grid;
 
-  grid-template-columns:
-    245px
-    minmax(0, 1fr);
+  grid-template-columns: 245px minmax(0, 1fr);
 
-  gap: 40px;
+  gap: 38px;
 
   align-items: center;
 
   background: #faf8f4;
 }
 
-
-/* ABOUT PHOTO */
-
 .about-photo {
   width: 245px;
-  height: 225px;
+  height: 220px;
 
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      135deg,
-      #d8ccbe,
-      #b29f89
-    );
+  background: linear-gradient(
+    135deg,
+    #d8ccbe,
+    #b29f89
+  );
 }
 
 .about-photo img {
@@ -685,23 +594,20 @@ a {
   object-position: center;
 }
 
-
-/* ABOUT CONTENT */
-
 .about-content {
   max-width: 920px;
 }
 
 .about-content h2 {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
-  font-size: 38px;
+  font-size: 37px;
 
   line-height: 1.05;
 }
 
 .about-content p {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   font-size: 13.5px;
 
@@ -718,9 +624,7 @@ a {
 ========================================================= */
 
 .contact {
-  padding:
-    82px
-    7%;
+  padding: 75px 7%;
 
   text-align: center;
 
@@ -728,9 +632,9 @@ a {
 }
 
 .contact h2 {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
-  font-size: 47px;
+  font-size: 45px;
 
   line-height: 1.08;
 }
@@ -738,10 +642,7 @@ a {
 .contact > p:not(.eyebrow) {
   max-width: 650px;
 
-  margin:
-    0
-    auto
-    27px;
+  margin: 0 auto 25px;
 
   font-size: 15px;
 
@@ -754,9 +655,7 @@ a {
 ========================================================= */
 
 footer {
-  padding:
-    37px
-    6%;
+  padding: 35px 6%;
 
   display: flex;
   align-items: center;
@@ -785,26 +684,24 @@ footer {
 @media (max-width: 1200px) {
 
   .nav {
-    gap: 24px;
+    gap: 23px;
+  }
+
+  .hero {
+    background-position: 62% center;
   }
 
   .hero-content {
-    width: 58%;
+    width: 56%;
   }
 
   .hero h1 {
-    font-size: 57px;
-  }
-
-  .hero-description {
-    max-width: 530px;
+    font-size: 54px;
   }
 
   .service-grid {
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
 }
 
 
@@ -814,12 +711,8 @@ footer {
 
 @media (max-width: 850px) {
 
-  /* HEADER */
-
   .header {
-    padding:
-      0
-      7%;
+    padding: 0 7%;
   }
 
   .nav {
@@ -830,62 +723,46 @@ footer {
   /* HERO */
 
   .hero {
-    height: 570px;
+    height: 540px;
 
-    background-position:
-      62% center;
+    background-position: 65% center;
   }
 
   .hero::before {
-    background:
-      linear-gradient(
-        90deg,
-
-        rgba(247, 244, 238, 0.98) 0%,
-
-        rgba(247, 244, 238, 0.95) 40%,
-
-        rgba(247, 244, 238, 0.72) 60%,
-
-        rgba(247, 244, 238, 0.30) 78%,
-
-        rgba(247, 244, 238, 0.08) 100%
-      );
+    background: linear-gradient(
+      90deg,
+      rgba(243, 238, 230, 0.98) 0%,
+      rgba(243, 238, 230, 0.96) 38%,
+      rgba(243, 238, 230, 0.80) 55%,
+      rgba(243, 238, 230, 0.40) 75%,
+      rgba(243, 238, 230, 0.10) 100%
+    );
   }
 
   .hero-content {
-    width: 75%;
-    max-width: 650px;
+    width: 72%;
+    max-width: 620px;
 
-    height: 570px;
+    height: 540px;
 
-    padding:
-      50px
-      0
-      50px
-      7%;
+    padding: 45px 0 45px 7%;
   }
 
   .hero h1 {
-    font-size: 50px;
+    font-size: 49px;
   }
 
   .hero-description {
-    max-width: 500px;
+    max-width: 490px;
 
-    font-size: 16px;
-  }
-
-  .hero-visual {
-    display: none;
+    font-size: 15px;
   }
 
 
   /* SERVICES */
 
   .service-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
 
@@ -897,20 +774,16 @@ footer {
 
   .work-main,
   .engagements {
-    padding:
-      50px
-      7%;
+    padding: 48px 7%;
   }
 
 
   /* ABOUT */
 
   .about {
-    grid-template-columns:
-      210px
-      minmax(0, 1fr);
+    grid-template-columns: 210px minmax(0, 1fr);
 
-    gap: 30px;
+    gap: 28px;
   }
 
   .about-photo {
@@ -928,7 +801,6 @@ footer {
 
     text-align: center;
   }
-
 }
 
 
@@ -965,20 +837,13 @@ footer {
 
   .hero {
     height: auto;
-    min-height: 610px;
+    min-height: 570px;
 
-    background-position:
-      68% center;
+    background-position: 70% center;
   }
 
-  /*
-    Stronger translucent layer on mobile,
-    because text and image share less space.
-  */
-
   .hero::before {
-    background:
-      rgba(247, 244, 238, 0.87);
+    background: rgba(243, 238, 230, 0.88);
   }
 
   .hero-content {
@@ -986,17 +851,15 @@ footer {
     max-width: none;
 
     height: auto;
-    min-height: 610px;
+    min-height: 570px;
 
-    padding:
-      47px
-      7%;
+    padding: 43px 7%;
   }
 
   .hero h1 {
     max-width: 100%;
 
-    font-size: 42px;
+    font-size: 40px;
 
     line-height: 1.04;
 
@@ -1006,10 +869,7 @@ footer {
   .hero-description {
     max-width: 100%;
 
-    margin:
-      22px
-      0
-      25px;
+    margin: 20px 0 23px;
 
     font-size: 15px;
   }
@@ -1028,22 +888,15 @@ footer {
     width: 100%;
   }
 
-  .hero-visual {
-    display: none;
-  }
-
 
   /* SERVICES */
 
   .services {
-    padding:
-      48px
-      7%
-      52px;
+    padding: 45px 7% 50px;
   }
 
   .section-intro h2 {
-    font-size: 34px;
+    font-size: 33px;
   }
 
   .section-intro > p:last-child {
@@ -1055,7 +908,7 @@ footer {
   }
 
   .service-card {
-    min-height: 220px;
+    min-height: 215px;
   }
 
 
@@ -1063,26 +916,22 @@ footer {
 
   .work-main,
   .engagements {
-    padding:
-      48px
-      7%;
+    padding: 45px 7%;
   }
 
   .work-main h2 {
-    font-size: 36px;
+    font-size: 35px;
   }
 
 
   /* ABOUT */
 
   .about {
-    padding:
-      45px
-      7%;
+    padding: 43px 7%;
 
     grid-template-columns: 1fr;
 
-    gap: 25px;
+    gap: 24px;
   }
 
   .about-photo {
@@ -1093,29 +942,24 @@ footer {
   }
 
   .about-content h2 {
-    font-size: 36px;
+    font-size: 35px;
   }
 
 
   /* CONTACT */
 
   .contact {
-    padding:
-      65px
-      7%;
+    padding: 62px 7%;
   }
 
   .contact h2 {
-    font-size: 38px;
+    font-size: 37px;
   }
 
 
   /* FOOTER */
 
   footer {
-    padding:
-      32px
-      7%;
+    padding: 31px 7%;
   }
-
 }
