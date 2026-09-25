@@ -573,25 +573,20 @@ a {
 
 .about-photo {
   width: 245px;
-  height: 220px;
-
+  height: 280px;
   overflow: hidden;
-
-  background: linear-gradient(
-    135deg,
-    #d8ccbe,
-    #b29f89
-  );
+  background: #ebe4da;
 }
 
 .about-photo img {
   width: 100%;
   height: 100%;
-
   display: block;
 
   object-fit: cover;
-  object-position: center;
+
+  /* Keeps your face in the right position */
+  object-position: center 25%;
 }
 
 .about-content {
